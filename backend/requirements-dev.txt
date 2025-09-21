@@ -1,0 +1,5 @@
+# Dev/test-only dependencies
+pytest>=7
+# Pin httpx to a version compatible with Starlette TestClient used by FastAPI 0.104.x
+httpx<0.28
+

@@ -71,3 +71,17 @@ curl -X DELETE http://localhost:8000/kv/name
 
 - CORS: Not required when using the Next.js API proxy. If calling the backend directly from a browser app, enable CORS in `main.py` via `fastapi.middleware.cors`.
 - Production: Consider adding persistent storage (e.g., SQLite/PostgreSQL) and authentication before exposing publicly.
+
+## Testing
+
+Using FastAPI's TestClient with pytest:
+
+```bash
+cd backend
+python -m pip install -r requirements.txt
+python -m pip install -r requirements-dev.txt  # installs pytest and a compatible httpx version
+python -m pytest -q
+```
+
+Troubleshooting:
+- If you see `TypeError: Client.__init__() got an unexpected keyword argument 'app'`, you have an incompatible `httpx` version. Installing `requirements-dev.txt` pins a compatible version (`httpx<0.28`).
