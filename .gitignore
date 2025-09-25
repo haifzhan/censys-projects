@@ -1,0 +1,5 @@
+.venv
+backend/.venv
+backend/.cache
+backend/tests
+backend/__pycache__/*pyc
