@@ -1,5 +1,10 @@
 .venv
 backend/.venv
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
 backend/.cache
 backend/tests
 backend/__pycache__/*pyc
