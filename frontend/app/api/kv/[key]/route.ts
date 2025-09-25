@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const BACKEND_URL = "http://localhost:8000";
+const BACKEND_URL = process.env.BACKEND_URL ?? "http://localhost:8000";
 
 export async function GET(_req: Request, { params }: { params: { key: string } }) {
   const url = `${BACKEND_URL}/kv/${encodeURIComponent(params.key)}`;
