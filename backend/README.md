@@ -19,13 +19,15 @@ pip install -r requirements.txt
 
 ## Run
 
-Start the API (auto-reload enabled when run as a script):
+- Local (dev)
+  - Start: `python main.py`
+  - Stop: Press Ctrl+C in the terminal
 
-```bash
-python main.py
-```
-
-The server listens on `http://localhost:8000`. Interactive docs are available at `http://localhost:8000/docs`.
+- Docker
+  - Start only backend: `docker compose up -d backend` (or `make up-backend`)
+  - Stop only backend: `docker compose stop backend` (or `make stop-backend`)
+  - Logs: `docker compose logs -f backend` (or `make logs` and filter)
+  - The server listens on `http://localhost:8000`. Interactive docs: `http://localhost:8000/docs`.
 
 ## API
 
